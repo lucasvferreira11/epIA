@@ -1,6 +1,8 @@
 package algoritmo;
 
 import java.util.LinkedList;
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 import util.Sorteio;
 
@@ -49,6 +51,17 @@ public class SorteadorIndividuo {
 		else
 			return buscaBinaria(valor,meio+1, fim);
 		
+	}
+	
+	public double sorteiaDouble(double max) {
+		Random r = new Random();
+		double randomValue = max  * r.nextDouble();
+		return randomValue;
+	}
+	
+	public int sorteiaInt(int max) {
+		int randomValue = ThreadLocalRandom.current().nextInt(0, max + 1);
+		return randomValue;
 	}
 	
 	
