@@ -14,7 +14,7 @@ public class CruzaXeYSeparado implements ICruzamento {
 		int[] bits2 = new int[20];
 		int somador = 0;
 
-		while(somador < 10){
+		while(somador <= 10){
 			int ponto1 = Sorteio.sorteiaInt(9);
 			int ponto2 = Sorteio.sorteiaIntComExcecao(9, ponto1);
 			ponto1+=somador;
@@ -36,6 +36,7 @@ public class CruzaXeYSeparado implements ICruzamento {
 					bits2[i] = i1.getBit(i);
 				}
 			}
+			somador +=10;
 		}
 		
 		novo1.setBits(bits1);
@@ -53,11 +54,9 @@ public class CruzaXeYSeparado implements ICruzamento {
 		
 		i1.imprimeIndividuo("Individuo 1 :");
 		i2.imprimeIndividuo("Individuo 2 :");
-/*		
 		Individuo[] novos = cruza.cruza(i1, i2);
-		novos[0].imprimeIndividuo("Novo 1 :");
-		novos[1].imprimeIndividuo("Novo 2 :");
-*/		
+		novos[0].imprimeIndividuo("Novo 1      :");
+		novos[1].imprimeIndividuo("Novo 2      :");
 	}
 	
 

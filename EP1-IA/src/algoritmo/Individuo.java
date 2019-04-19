@@ -47,7 +47,7 @@ public class Individuo {
 	
 	public String getBitsAsString(){
 		StringBuilder str = new StringBuilder("[").append(bits[0]);
-		for(int i = 0; i < 20; i++)
+		for(int i = 1; i < 20; i++)
 			str.append("," + bits[i]);
 		return str.append("]").toString();
 	}
