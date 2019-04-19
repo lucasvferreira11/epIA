@@ -2,16 +2,27 @@ package algoritmo;
 
 import java.util.LinkedList;
 
+import cruzamentos.ICruzamento;
 import util.Sorteio;
 
 public class AG {
 	
+	private int epocas;
+	private int tamanhoPopulacao;
+	private ICruzamento tipoCruzamento;
+	private double[] dataFitMin;
+	private double[] dataFitAvg;
+
+	public AG(int epocas, int tamanhoPopulacao, ICruzamento tipoCruzamento){
+		this.epocas = epocas;
+		this.tamanhoPopulacao = tamanhoPopulacao;
+		this.tipoCruzamento = tipoCruzamento;
+		dataFitMin = new double[epocas+1];
+		dataFitAvg = new double[epocas+1];
+	}
+	
 	private Individuo[] cruza(Individuo i1, Individuo i2){
-		
-		
-		
-		
-		return null;
+		return tipoCruzamento.cruza(i1, i2);
 	}
 
 	public void verificaMutacao(Individuo individuo){
@@ -22,12 +33,21 @@ public class AG {
 		}
 	}
 	
-	public void executar(int epocas, int tamanhoPopulacao){
+	private void saveFitData(int epoca, Populacao populacao){
+		double[] dadosFitness = populacao.getDadosFitness();
+		dataFitMin[epoca] = dadosFitness[0];
+		dataFitAvg[epoca] = dadosFitness[1];
+	}
+	
+	
+	public void executar(){
 		
 		Populacao populacao = new Populacao(tamanhoPopulacao);
 		Populacao novaPopulacao = new Populacao();
 		
 		for(int e = 0; e < epocas; e++){
+			
+			saveFitData(e, populacao);
 			
 			SorteadorIndividuo sorteador = new SorteadorIndividuo();
 			LinkedList<Individuo> individuosSelecionados = sorteador.selecionaIndividuos(populacao);
@@ -49,10 +69,17 @@ public class AG {
 			populacao = novaPopulacao;
 			
 		}
+
+		saveFitData(epocas, populacao);
 		
-		
+		exportaDadosExcel(dataFitMin, dataFitAvg);
 		
 	}
 	
+	private void exportaDadosExcel(double[] dataFitMin, double[] dataFitAvg){
+		
+		//Pega esses 2 parametros e gera o excel
+		
+	}
 
 }

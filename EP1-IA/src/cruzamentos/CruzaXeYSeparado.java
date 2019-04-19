@@ -46,17 +46,6 @@ public class CruzaXeYSeparado implements ICruzamento {
 	}
 	
 	public static void main(String[] args) {
-
-		Individuo i1 = new Individuo(true);
-		Individuo i2 = new Individuo(true);
-		
-		ICruzamento cruza = new CruzaXeYSeparado();
-		
-		i1.imprimeIndividuo("Individuo 1 :");
-		i2.imprimeIndividuo("Individuo 2 :");
-		Individuo[] novos = cruza.cruza(i1, i2);
-		novos[0].imprimeIndividuo("Novo 1      :");
-		novos[1].imprimeIndividuo("Novo 2      :");
 	}
 	
 

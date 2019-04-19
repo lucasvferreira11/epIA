@@ -33,12 +33,16 @@ public class Individuo {
 	
 	public void mutaAlelo(int alelo){
 		
+		imprimeIndividuo("Antes de mutar: ");
 		System.out.println("Mutou alelo " + alelo);
 		
 		if(bits[alelo] == 1)
 			bits[alelo] = 0;
 		else
 			bits[alelo] = 1;
+
+		imprimeIndividuo("Apos mutar    : ");
+
 	}
 
 	public void setBits(int[] bits) {
@@ -82,6 +86,5 @@ public class Individuo {
 	public void imprimeIndividuo(String texto){
 		System.out.println(texto + "" + getBitsAsString());
 	}
-
 	
 }
