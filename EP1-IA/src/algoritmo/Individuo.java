@@ -60,7 +60,7 @@ public class Individuo {
 	}
 	
 	public double getFitDistanceToMax(){
-		return MAX_FIT_VALUE - getFitnessValue(x, y);
+		return MAX_FIT_VALUE - getFitnessValue();
 	}
 
 }

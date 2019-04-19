@@ -16,4 +16,8 @@ public class Sorteio {
 		return randomValue;
 	}
 	
+	public static void main(String[] args) {
+		
+	}
+	
 }

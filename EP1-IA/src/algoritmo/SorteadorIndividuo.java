@@ -1,8 +1,6 @@
 package algoritmo;
 
 import java.util.LinkedList;
-import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
 
 import util.Sorteio;
 
@@ -16,7 +14,7 @@ public class SorteadorIndividuo {
 		
 		limiteSupIndividuo = new double[populacao.getTamanho()];
 		
-		//double total = populacao.getIndividuos().stream().mapToDouble(Individuo::getFitDistanceToMax).sum();
+		double total = populacao.getIndividuos().stream().mapToDouble(Individuo::getFitDistanceToMax).sum();
 		
 		double pInd;
 	
