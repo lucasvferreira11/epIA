@@ -7,6 +7,10 @@ import util.Sorteio;
 public class AG {
 	
 	private Individuo[] cruza(Individuo i1, Individuo i2){
+		
+		
+		
+		
 		return null;
 	}
 
