@@ -1,10 +1,11 @@
 package cruzamentos;
 
+import java.util.Random;
 import algoritmo.Individuo;
 
 public class CruzaTodoCromossomo implements ICruzamento {
 
-	public Individuo[] cruza(Individuo i1, Individuo I2){
+	public Individuo[] cruza(Individuo i1, Individuo i2){
 		int individuo1 []  = i1.getBits();
 		int individuo2 [] = i2.getBits();
 		
