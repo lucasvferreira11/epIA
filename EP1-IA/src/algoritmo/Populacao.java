@@ -17,6 +17,29 @@ public class Populacao {
 		}
 	}
 	
+	public double[] getDadosFitness(){
+		
+		double[] dados = new double[2];
+		
+		Double min = individuos.stream()
+				.mapToDouble(Individuo::getFitnessValue)
+				.min().getAsDouble();
+		
+		dados[0] = min;
+		
+		Double avg = individuos.stream()
+		  		  .mapToDouble(Individuo::getFitnessValue)
+		  		  .average().getAsDouble();
+		
+		dados[1] = avg;
+		
+		System.out.println("Min fit is " + min);
+		System.out.println("Avg fit is " + avg);
+		
+		return dados;
+		
+	}
+	
 	public int getTamanho(){
 		return this.individuos.size();
 	}
