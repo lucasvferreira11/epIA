@@ -4,8 +4,8 @@ import util.Sorteio;
 
 public class Individuo {
 
-	private static final double MAX_FIT_VALUE = 5.12;
-	private int bits[] = new int[20];
+  private static final double MAX_FIT_VALUE = 5.12;
+		private int bits[] = new int[20];
 
 	public Individuo(){}
 	
@@ -27,6 +27,10 @@ public class Individuo {
 		return bits;
 	}
 	
+	public int getBit(int posicao){
+		return bits[posicao];
+	}
+	
 	public void mutaAlelo(int alelo){
 		
 		System.out.println("Mutou alelo " + alelo);
@@ -42,10 +46,10 @@ public class Individuo {
 	}
 	
 	public String getBitsAsString(){
-		StringBuilder str = new StringBuilder();
-		for(int i = 0; i < 20; i++)
-			str.append(bits[i]);
-		return str.toString();
+		StringBuilder str = new StringBuilder("[").append(bits[0]);
+		for(int i = 1; i < 20; i++)
+			str.append("," + bits[i]);
+		return str.append("]").toString();
 	}
 	
 	public double getFitnessValue(){
@@ -66,9 +70,19 @@ public class Individuo {
 		return (fitness -5.12);
 		
 	}
-	
+  
 	public double getFitDistanceToMax(){
 		return MAX_FIT_VALUE - getFitnessValue();
 	}
+	
+	public void imprimeIndividuo(){
+		imprimeIndividuo("");
+	}
+	
+	public void imprimeIndividuo(String texto){
+		System.out.println(texto + "" + getBitsAsString());
+	}
 
+	
 }
+
