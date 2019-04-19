@@ -1,0 +1,39 @@
+int individuo1 []  = i1.getBits();
+		int individuo2 [] = i2.getBits();
+		
+		Random gerador = new Random();
+		int v1= gerador.nextInt(20); //vai sortear um valor de 0 a 19
+		int v2= gerador.nextInt(20); 
+		
+		int filho1 [] = new int [20];
+		int filho2 [] = new int [20];
+		
+		//cruza para gerar filho 1
+		for(int i=0; i< filho1.length ; i++) {
+			while (i < v1) {
+				filho1[i] = individuo1[i];
+				i++;
+			}
+			
+			while(i<=v2) {
+				filho1[i] = individuo2[i];
+				i++;
+			}
+			
+			filho1[i] = individuo1[i];
+		}
+		
+		//cruza para gerar filho 2
+		for(int i=0; i< filho2.length ; i++) {
+			while (i < v1) {
+						filho1[i] = individuo2[i];
+						i++;
+					}
+					
+					while(i<=v2) {
+						filho1[i] = individuo1[i];
+						i++;
+					}
+					
+					filho1[i] = individuo2[i];
+				}
