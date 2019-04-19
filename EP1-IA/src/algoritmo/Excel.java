@@ -10,7 +10,7 @@ public class Excel{
 	
 	public Excel() {}
 	
-		public void GeraExcel() {
+		public void GeraExcel(int[] melhor, int[] medio) {
 		//public static void main(String[]args){
 			
 			try {
@@ -22,15 +22,19 @@ public class Excel{
 		        
 		        // criando as colunas
 		        HSSFRow rowhead=   sheet.createRow((short)0);
-		        rowhead.createCell(0).setCellValue("Indiviuo");
-		        rowhead.createCell(1).setCellValue("Fitness");
-		        rowhead.createCell(2).setCellValue("Probabilidade");
+		        rowhead.createCell(0).setCellValue("Epoca");
+		        rowhead.createCell(1).setCellValue("Fitness medio");
+		        rowhead.createCell(2).setCellValue("Melhor Fitness");
 		        
 		        // define os valores das linhas
-		        //falta popular as linhas
-		        HSSFRow row=   sheet.createRow((short)1);
-		        row.createCell(0).setCellValue("x");
-		        row.createCell(1).setCellValue("y");
+		        int tamanho = melhor.length;
+		        for(int i = 1; i <= tamanho; i++) {
+		        	HSSFRow row=   sheet.createRow((short)i);
+			        row.createCell(0).setCellValue(i);
+			        row.createCell(1).setCellValue(medio[i]);
+			        row.createCell(1).setCellValue(melhor[i]);
+		        }
+		        
 
 		        FileOutputStream fileOut =  new FileOutputStream(filename);
 		        workbook.write(fileOut);
@@ -44,5 +48,3 @@ public class Excel{
        
  	}
 }
-
-
