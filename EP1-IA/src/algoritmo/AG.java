@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import cruzamentos.ICruzamento;
 import util.Sorteio;
 
+
 public class AG {
 	
 	private int epocas;
