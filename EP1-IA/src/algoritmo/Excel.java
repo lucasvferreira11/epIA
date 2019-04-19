@@ -10,7 +10,7 @@ public class Excel{
 	
 	public Excel() {}
 	
-		public void GeraExcel(int[] melhor, int[] medio) {
+		public void GeraExcel(double[] melhor, double[] medio) {
 		//public static void main(String[]args){
 			
 			try {
@@ -28,11 +28,11 @@ public class Excel{
 		        
 		        // define os valores das linhas
 		        int tamanho = melhor.length;
-		        for(int i = 1; i <= tamanho; i++) {
+		        for(int i = 1; i < tamanho; i++) {
 		        	HSSFRow row=   sheet.createRow((short)i);
 			        row.createCell(0).setCellValue(i);
 			        row.createCell(1).setCellValue(medio[i]);
-			        row.createCell(1).setCellValue(melhor[i]);
+			        row.createCell(2).setCellValue(melhor[i]);
 		        }
 		        
 
