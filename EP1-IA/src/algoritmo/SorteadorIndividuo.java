@@ -28,7 +28,7 @@ public class SorteadorIndividuo {
 		
 		for(int i =0; i< populacao.getTamanho(); i++){
 			double sorteado = Sorteio.sorteiaDouble(100d);
-			int posicaoSelecionado = buscaBinaria(sorteado,0,populacao.getTamanho());
+			int posicaoSelecionado = buscaBinaria(sorteado,0,populacao.getTamanho()-1);
 			individuoSelecionado = populacao.getIndividuos().get(posicaoSelecionado).geraCopia();
 			individuosSelecionados.add(individuoSelecionado);
 		}

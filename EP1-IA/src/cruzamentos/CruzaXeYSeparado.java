@@ -45,8 +45,5 @@ public class CruzaXeYSeparado implements ICruzamento {
 		return new Individuo[]{novo1,novo2};
 	}
 	
-	public static void main(String[] args) {
-	}
-	
 
 }

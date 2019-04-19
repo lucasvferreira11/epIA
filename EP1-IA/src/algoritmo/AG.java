@@ -53,7 +53,7 @@ public class AG {
 			SorteadorIndividuo sorteador = new SorteadorIndividuo();
 			LinkedList<Individuo> individuosSelecionados = sorteador.selecionaIndividuos(populacao);
 			
-			for(int i = 0; i < tamanhoPopulacao; i ++){
+			for(int i = 0; i < tamanhoPopulacao; i=i+2){
 				
 				Individuo i1 = individuosSelecionados.get(i);
 				Individuo i2 = individuosSelecionados.get(i+1);
