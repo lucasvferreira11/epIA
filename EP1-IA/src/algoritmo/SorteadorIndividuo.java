@@ -53,6 +53,7 @@ public class SorteadorIndividuo {
 		
 	}
 	
+	
 	public double sorteiaDouble(double max) {
 		Random r = new Random();
 		double randomValue = max  * r.nextDouble();
