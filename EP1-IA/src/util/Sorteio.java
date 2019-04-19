@@ -16,6 +16,15 @@ public class Sorteio {
 		return randomValue;
 	}
 	
+	public static int sorteiaIntComExcecao(int max, int excecao) {
+		int sorteado = sorteiaInt(max);
+		while(sorteado == excecao){
+			sorteado = sorteiaInt(max);
+		}
+		return sorteado;
+	}
+
+	
 	public static void main(String[] args) {
 		
 	}

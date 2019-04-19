@@ -27,6 +27,10 @@ public class Individuo {
 		return bits;
 	}
 	
+	public int getBit(int posicao){
+		return bits[posicao];
+	}
+	
 	public void mutaAlelo(int alelo){
 		
 		System.out.println("Mutou alelo " + alelo);
@@ -42,10 +46,10 @@ public class Individuo {
 	}
 	
 	public String getBitsAsString(){
-		StringBuilder str = new StringBuilder();
+		StringBuilder str = new StringBuilder("[").append(bits[0]);
 		for(int i = 0; i < 20; i++)
-			str.append(bits[i]);
-		return str.toString();
+			str.append("," + bits[i]);
+		return str.append("]").toString();
 	}
 	
 	public double getFitnessValue(){
@@ -62,5 +66,14 @@ public class Individuo {
 	public double getFitDistanceToMax(){
 		return MAX_FIT_VALUE - getFitnessValue();
 	}
+	
+	public void imprimeIndividuo(){
+		imprimeIndividuo("");
+	}
+	
+	public void imprimeIndividuo(String texto){
+		System.out.println(texto + "" + getBitsAsString());
+	}
 
+	
 }
