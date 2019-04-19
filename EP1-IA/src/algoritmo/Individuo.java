@@ -4,7 +4,7 @@ import util.Sorteio;
 
 public class Individuo {
 
-	private static final double MAX_FIT_VALUE = 10;
+	private static final double MAX_FIT_VALUE = 5.12;
 	private int bits[] = new int[20];
 
 	public Individuo(){}
@@ -48,18 +48,27 @@ public class Individuo {
 		return str.toString();
 	}
 	
-	public double getFitnessValue(double x, double y){
-		
+	public double getFitnessValue(){
+		double x = 0;
+		double y = 0;
+		for (int i = 0; i<10; i++) {
+			x += (bits[i] * (i^2));
+		}
+		for (int i = 10; i<20; i++) {
+			y += (bits[i] * (2^i));
+		}
+		x = x * 0.00978;
+		y = y * 0.00978;
 		double cosX = Math.cos(2 * x * Math.PI);
 		double cosY = Math.cos(2 * y * Math.PI);
 		double fitness = 20 + (x * x) + (y * y) - 10* (cosX + cosY);
 		
-		return fitness;
+		return (fitness -5.12);
 		
 	}
 	
-	public double getFitDistanceToMax(double x, double y){
-		return MAX_FIT_VALUE - getFitnessValue(x, y);
+	public double getFitDistanceToMax(){
+		return MAX_FIT_VALUE - getFitnessValue();
 	}
 
 }
