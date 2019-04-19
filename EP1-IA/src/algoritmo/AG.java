@@ -77,9 +77,8 @@ public class AG {
 	}
 	
 	private void exportaDadosExcel(double[] dataFitMin, double[] dataFitAvg){
-		
-		//Pega esses 2 parametros e gera o excel
-		
+		Excel exportar = new Excel();
+		exportar.GeraExcel(dataFitMin, dataFitAvg);
 	}
 
 }
