@@ -48,8 +48,9 @@ public class Individuo {
 		return str.toString();
 	}
 	
-	public double getFitnessValue(double x, double y){
-		
+	public double getFitnessValue(){
+		double x = 0;
+		double y = 0;
 		double cosX = Math.cos(2 * x * Math.PI);
 		double cosY = Math.cos(2 * y * Math.PI);
 		double fitness = 20 + (x * x) + (y * y) - 10* (cosX + cosY);
@@ -58,7 +59,7 @@ public class Individuo {
 		
 	}
 	
-	public double getFitDistanceToMax(double x, double y){
+	public double getFitDistanceToMax(){
 		return MAX_FIT_VALUE - getFitnessValue(x, y);
 	}
 
