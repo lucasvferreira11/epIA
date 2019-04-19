@@ -27,6 +27,7 @@ public class Individuo {
 		return bits;
 	}
 	
+	//não sei se a mutacao assim é correto
 	public void mutaAlelo(int alelo){
 		
 		System.out.println("Mutou alelo " + alelo);
