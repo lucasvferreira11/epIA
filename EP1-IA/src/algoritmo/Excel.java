@@ -27,6 +27,7 @@ public class Excel{
 		        rowhead.createCell(2).setCellValue("Probabilidade");
 		        
 		        // define os valores das linhas
+		        //falta popular as linhas
 		        HSSFRow row=   sheet.createRow((short)1);
 		        row.createCell(0).setCellValue("x");
 		        row.createCell(1).setCellValue("y");

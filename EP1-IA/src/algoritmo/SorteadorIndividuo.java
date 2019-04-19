@@ -16,7 +16,7 @@ public class SorteadorIndividuo {
 		
 		limiteSupIndividuo = new double[populacao.getTamanho()];
 		
-		double total = populacao.getIndividuos().stream().mapToDouble(Individuo::getFitDistanceToMax).sum();
+		//double total = populacao.getIndividuos().stream().mapToDouble(Individuo::getFitDistanceToMax).sum();
 		
 		double pInd;
 	
@@ -54,16 +54,7 @@ public class SorteadorIndividuo {
 	}
 	
 	
-	public double sorteiaDouble(double max) {
-		Random r = new Random();
-		double randomValue = max  * r.nextDouble();
-		return randomValue;
-	}
 	
-	public int sorteiaInt(int max) {
-		int randomValue = ThreadLocalRandom.current().nextInt(0, max + 1);
-		return randomValue;
-	}
 	
 	
 }

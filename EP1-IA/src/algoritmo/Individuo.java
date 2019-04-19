@@ -48,14 +48,18 @@ public class Individuo {
 		return str.toString();
 	}
 	
-	public double getFitnessValue(){
+	public double getFitnessValue(double x, double y){
 		
-		return 0;
+		double cosX = Math.cos(2 * x * Math.PI);
+		double cosY = Math.cos(2 * y * Math.PI);
+		double fitness = 20 + (x * x) + (y * y) - 10* (cosX + cosY);
+		
+		return fitness;
 		
 	}
 	
-	public double getFitDistanceToMax(){
-		return MAX_FIT_VALUE - getFitnessValue();
+	public double getFitDistanceToMax(double x, double y){
+		return MAX_FIT_VALUE - getFitnessValue(x, y);
 	}
 
 }
