@@ -83,7 +83,7 @@ public class Individuo {
 	}
   
 	public double getFitDistanceToMax(){
-		return MAX_FIT_VALUE - getFitnessValue();
+		return Math.abs(MAX_FIT_VALUE - getFitnessValue());
 	}
 	
 	public void imprimeIndividuo(){

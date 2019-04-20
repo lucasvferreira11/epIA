@@ -4,10 +4,10 @@ import cruzamentos.CruzaXeYSeparado;
 
 public class Main{
 	public static void main (String []args) {
-/*		CruzaXeYSeparado cruza = new CruzaXeYSeparado();
+		CruzaXeYSeparado cruza = new CruzaXeYSeparado();
 		AG teste = new AG(100, 50, cruza);
-		teste.executar();*/
-		
+		teste.executar();
+		/*		/*
 		int nInd = 50;
 		Individuo in = null;
 		
@@ -27,7 +27,6 @@ public class Main{
 		System.out.println(ind3.getBitsAsString() + " - " + ind3.getFitnessValue());
 		System.out.println(ind4.getBitsAsString() + " - " + ind4.getFitnessValue());
 		
-		/*
 		for(int i =0; i < nInd; i++){
 			in = new Individuo(true);
 			System.out.println(in.getBitsAsString() + " - " + in.getFitnessValue());

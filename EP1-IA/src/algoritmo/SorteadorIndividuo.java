@@ -38,7 +38,7 @@ public class SorteadorIndividuo {
 	
 	private int buscaBinaria(double valor, int inicio, int fim){
 		
-		if(inicio == fim)
+		if(inicio > fim)
 			return inicio;
 		
 		int meio = (fim + inicio) / 2;
