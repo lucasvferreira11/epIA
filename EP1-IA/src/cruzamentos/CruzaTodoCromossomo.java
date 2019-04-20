@@ -36,16 +36,16 @@ public class CruzaTodoCromossomo implements ICruzamento {
 		//cruza para gerar filho 2
 		for(int i=0; i< filho2.length ; i++) {
 			while (i < v1) {
-						filho1[i] = i2.getBit(i);
+						filho2[i] = i2.getBit(i);
 						i++;
 					}
 					
 					while(i<=v2) {
-						filho1[i] = i1.getBit(i);
+						filho2[i] = i1.getBit(i);
 						i++;
 					}
 					
-					filho1[i] = i2.getBit(i);
+					filho2[i] = i2.getBit(i);
 			}
 		
 		f1.setBits(filho1);
