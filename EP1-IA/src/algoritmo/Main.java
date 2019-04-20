@@ -15,9 +15,13 @@ public class Main{
 		ind1.setBits(new int[]{1,0,0,1,0,1,1,0,1,0,0,0,1,0,1,0,1,1,1,0});
 		Individuo ind2 = new Individuo();
 		ind2.setBits(new int[]{0,0,0,1,0,1,1,1,0,0,1,0,0,1,1,1,1,0,1,0});
+
+		Individuo ind3 = new Individuo();
+		ind3.setBits(new int[]{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0});
 		
 		System.out.println(ind1.getBitsAsString() + " - " + ind1.getFitnessValue());
 		System.out.println(ind2.getBitsAsString() + " - " + ind2.getFitnessValue());
+		System.out.println(ind3.getBitsAsString() + " - " + ind3.getFitnessValue());
 		
 		/*
 		for(int i =0; i < nInd; i++){
