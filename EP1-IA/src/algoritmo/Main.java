@@ -18,10 +18,14 @@ public class Main{
 
 		Individuo ind3 = new Individuo();
 		ind3.setBits(new int[]{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0});
+
+		Individuo ind4 = new Individuo();
+		ind4.setBits(new int[]{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1});
 		
 		System.out.println(ind1.getBitsAsString() + " - " + ind1.getFitnessValue());
 		System.out.println(ind2.getBitsAsString() + " - " + ind2.getFitnessValue());
 		System.out.println(ind3.getBitsAsString() + " - " + ind3.getFitnessValue());
+		System.out.println(ind4.getBitsAsString() + " - " + ind4.getFitnessValue());
 		
 		/*
 		for(int i =0; i < nInd; i++){
