@@ -68,6 +68,9 @@ public class Individuo {
 		
 		x = x * 0.00978;
 		y = y * 0.00978;
+		
+		x -= 5;
+		y -= 5;
 
 		System.out.println("Valor x " + x + " y " + y);
 
