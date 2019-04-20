@@ -62,7 +62,7 @@ public class Individuo {
 		for (int i = 0; i<10; i++) {
 			x += (bits[i] * Math.pow(2, i));
 		}
-		for (int i = 10; i<20; i++) {
+		for (int i = 9; i<20; i++) {
 			y += (bits[i] * Math.pow(2, i-10));
 		}
 		
