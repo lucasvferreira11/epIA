@@ -67,8 +67,8 @@ public class Individuo {
 		}
 		x = x * 0.00978;
 		y = y * 0.00978;
-		double cosX = Math.cos(2 * x * Math.PI);
-		double cosY = Math.cos(2 * y * Math.PI);
+		double cosX = Math.cos(2 * x * 90);
+		double cosY = Math.cos(2 * y * 90);
 		double fitness = 20 + (x * x) + (y * y) - 10* (cosX + cosY);
 		
 		return (fitness -5.12);
