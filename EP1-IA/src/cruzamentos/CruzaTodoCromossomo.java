@@ -1,7 +1,5 @@
 package cruzamentos;
 
-import java.util.Random;
-
 import algoritmo.Individuo;
 import util.Sorteio;
 
@@ -10,8 +8,14 @@ public class CruzaTodoCromossomo implements ICruzamento {
 	public Individuo[] cruza(Individuo i1, Individuo i2){
 
 		int v1= Sorteio.sorteiaInt(19); //vai sortear um valor de 0 a 19
-		int v2= Sorteio.sorteiaInt(19); 
+		int v2 = Sorteio.sorteiaIntComExcecao(19, v1);
 		
+		if(v1 > v2){
+			int aux = v2;
+			v2 = v1;
+			v1 = aux;
+		}
+
 		int filho1 [] = new int [20];
 		int filho2 [] = new int [20];
 		
@@ -19,34 +23,24 @@ public class CruzaTodoCromossomo implements ICruzamento {
 		Individuo f2= new Individuo ();
 		
 		//cruza para gerar filho 1
-		for(int i=0; i< filho1.length ; i++) {
-			while (i < v1) {
-				filho1[i] = i1.getBit(i);
-				i++;
-			}
-			
-			while(i<=v2) {
-				filho1[i] = i2.getBit(i);
-				i++;
-			}
-			
+		int i = 0;
+		while (i < v1) {
 			filho1[i] = i1.getBit(i);
+			filho2[i] = i2.getBit(i);
+			i++;
 		}
 		
-		//cruza para gerar filho 2
-		for(int i=0; i< filho2.length ; i++) {
-			while (i < v1) {
-						filho2[i] = i2.getBit(i);
-						i++;
-					}
-					
-					while(i<=v2) {
-						filho2[i] = i1.getBit(i);
-						i++;
-					}
-					
-					filho2[i] = i2.getBit(i);
-			}
+		while(i<=v2) {
+			filho1[i] = i2.getBit(i);
+			filho2[i] = i2.getBit(i);
+			i++;
+		}
+		
+		while(i < 20){
+			filho1[i] = i1.getBit(i);
+			filho2[i] = i2.getBit(i);
+			i++;
+		}
 		
 		f1.setBits(filho1);
 		f2.setBits(filho2);
@@ -54,7 +48,6 @@ public class CruzaTodoCromossomo implements ICruzamento {
 		Individuo [] filhos= new Individuo [2];
 		filhos[0]= f1;
 		filhos[1]= f2;
-		
 		
 		return filhos;
 	}

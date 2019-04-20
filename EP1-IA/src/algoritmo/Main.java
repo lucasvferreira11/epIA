@@ -1,10 +1,11 @@
 package algoritmo;
 
+import cruzamentos.CruzaTodoCromossomo;
 import cruzamentos.CruzaXeYSeparado;
 
 public class Main{
 	public static void main (String []args) {
-		CruzaXeYSeparado cruza = new CruzaXeYSeparado();
+		CruzaTodoCromossomo cruza = new CruzaTodoCromossomo();
 		AG teste = new AG(100, 50, cruza);
 		teste.executar();
 		/*		/*
