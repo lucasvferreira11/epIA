@@ -39,10 +39,12 @@ public class AG {
 		dataFitAvg[epoca] = dadosFitness[1];
 	}
 	
-	
 	public void executar(){
+		executar(new Populacao(tamanhoPopulacao));
+	}
+	
+	public void executar(Populacao populacao){
 		
-		Populacao populacao = new Populacao(tamanhoPopulacao);
 		Populacao novaPopulacao;
 		
 		for(int e = 0; e < epocas; e++){
@@ -66,7 +68,6 @@ public class AG {
 					verificaMutacao(novosIndividuos[1]);
 				}
 				else{
-					System.out.println("Nao faz crossover");
 					novosIndividuos = new Individuo[]{i1,i2};
 				}
 				

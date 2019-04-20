@@ -1,10 +1,12 @@
 package algoritmo;
 
+import java.io.Serializable;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Populacao {
+public class Populacao implements Serializable {
 
+	private static final long serialVersionUID = -43220086251230746L;
 	private List<Individuo> individuos = new LinkedList<Individuo>();
 	
 	public Populacao(){}
