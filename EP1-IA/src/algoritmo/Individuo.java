@@ -60,10 +60,6 @@ public class Individuo {
 		double x = 0;
 		double y = 0;
 		for (int i = 0; i<10; i++) {
-			x += (bits[i] * (2^i));
-		}
-		for (int i = 10; i<20; i++) {
-			y += (bits[i] * (2^i));
 			x += (bits[i] * Math.pow(2, i));
 		}
 		for (int i = 10; i<20; i++) {
