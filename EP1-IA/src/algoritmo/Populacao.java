@@ -21,19 +21,17 @@ public class Populacao {
 		
 		double[] dados = new double[2];
 		
-		Double min = individuos.stream()
+		Double max = individuos.stream()
 				.mapToDouble(Individuo::getFitnessValue)
-				.min().getAsDouble();
-		
-		dados[0] = min;
-		
+				.max().getAsDouble();
 		Double avg = individuos.stream()
 		  		  .mapToDouble(Individuo::getFitnessValue)
 		  		  .average().getAsDouble();
 		
+		dados[0] = max;
 		dados[1] = avg;
 		
-		System.out.println("Min fit is " + min);
+		System.out.println("Max fit is " + max);
 		System.out.println("Avg fit is " + avg);
 		
 		return dados;

@@ -18,12 +18,12 @@ public class SorteadorIndividuo {
 		
 		double pInd;
 	
-		double pTotal = 0d;
+		double limiteAnterior = 0d;
 		
 		for(int i =0; i < populacao.getTamanho(); i++){
-			pInd = ((populacao.getIndividuos().get(i).getFitnessValue() / total) * 100);
-			limiteSupIndividuo[i] = pTotal + pInd;
-			pTotal += limiteSupIndividuo[i];
+			pInd = ((populacao.getIndividuos().get(i).getFitDistanceToMax() / total) * 100);
+			limiteSupIndividuo[i] = limiteAnterior + pInd;
+			limiteAnterior = limiteSupIndividuo[i];
 		}
 		
 		for(int i =0; i< populacao.getTamanho(); i++){

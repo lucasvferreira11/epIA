@@ -5,8 +5,9 @@ import cruzamentos.CruzaXeYSeparado;
 
 public class Main{
 	public static void main (String []args) {
-		CruzaTodoCromossomo cruza = new CruzaTodoCromossomo();
-		AG teste = new AG(100, 50, cruza);
+//		CruzaTodoCromossomo cruza = new CruzaTodoCromossomo();
+		CruzaXeYSeparado cruza = new CruzaXeYSeparado();
+		AG teste = new AG(100, 100, cruza);
 		teste.executar();
 		/*		/*
 		int nInd = 50;
