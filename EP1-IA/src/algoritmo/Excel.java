@@ -10,13 +10,13 @@ public class Excel{
 	
 	public Excel() {}
 	
-		public void GeraExcel(double[] melhor, double[] medio) {
+		public void GeraExcel(double[] melhor, double[] medio, int epocas, int tamanhoPopulacao) {
 		//public static void main(String[]args){
 			
 			try {
 				 // local do arquivo
 				String caminho = System.getProperty("user.home");
-		    	String filename= caminho+"\\GA.xls" ;
+		    	String filename= caminho+"\\"+epocas+"epocas"+tamanhoPopulacao+"populacao"+"-GA.xls" ;
 		        HSSFWorkbook workbook = new HSSFWorkbook();
 		        HSSFSheet sheet =  workbook.createSheet("GA");  
 		        

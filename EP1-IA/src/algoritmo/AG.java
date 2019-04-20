@@ -80,7 +80,7 @@ public class AG {
 
 		saveFitData(epocas, populacao);
 		
-		exportaDadosExcel(dataFitMin, dataFitAvg);
+		exportaDadosExcel(dataFitMin, dataFitAvg, epocas, tamanhoPopulacao);
 		
 	}
 	
@@ -88,9 +88,9 @@ public class AG {
 		return Sorteio.sorteiaInt(100) < 70;
 	}
 
-	private void exportaDadosExcel(double[] dataFitMin, double[] dataFitAvg){
+	private void exportaDadosExcel(double[] dataFitMin, double[] dataFitAvg, int epocas, int tamanhoPopulacao){
 		Excel exportar = new Excel();
-		exportar.GeraExcel(dataFitMin, dataFitAvg);
+		exportar.GeraExcel(dataFitMin, dataFitAvg, epocas, tamanhoPopulacao);
 	}
 
 }
